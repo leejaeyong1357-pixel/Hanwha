@@ -1,0 +1,311 @@
+/**
+ * 학습 화면 우측 사전 패널용 어휘 사전.
+ * 문항에 등장하는 단어를 전부 포함하도록 유지한다.
+ * (문항도 우리가 생성하므로 커버리지를 100% 통제할 수 있다.)
+ */
+export const DICTIONARY: Record<string, string> = {
+
+  // ── 새 설문 주제 (직업·학업·거주·취미·운동·출장) ──────────
+  space: "공간", students: "학생들", teach: "가르치다", teacher: "선생님, 교사",
+  course: "강좌, 과정", courses: "강좌들", self: "자기 자신", development: "발전, 계발",
+  materials: "교재, 자료", run: "운영하다; 달리다", language: "언어",
+  quarters: "숙소, 생활관", barracks: "막사", draw: "그리다", tools: "도구들",
+  write: "쓰다", pieces: "작품들, 글들", written: "쓴, 작성된",
+  dance: "춤; 춤추다", dances: "춤들", invest: "투자하다", market: "시장",
+  investing: "투자하기", stocks: "주식", children: "아이들",
+  court: "코트, 경기장", teammates: "팀 동료들", basketball: "농구",
+  field: "경기장, 필드", glove: "글러브", bat: "배트", baseball: "야구",
+  soccer: "축구", shoes: "신발", football: "미식축구", rugby: "럭비",
+  rink: "링크(빙상장)", skates: "스케이트화", stick: "스틱", ice: "얼음",
+  hockey: "하키", ground: "경기장, 운동장", cricket: "크리켓", matches: "경기들",
+  clubs: "골프채; 동아리", golf: "골프", ball: "공", volleyball: "배구",
+  racket: "라켓", tennis: "테니스", badminton: "배드민턴", paddle: "탁구채",
+  table: "탁자, 테이블", pool: "수영장", swim: "수영하다", pools: "수영장들",
+  roads: "도로들", motorcycle: "오토바이", motorcycles: "오토바이들",
+  dive: "잠수하다", diving: "다이빙", scuba: "스쿠버", spots: "장소들",
+  resort: "리조트", skis: "스키(판)", board: "보드", skiing: "스키 타기",
+  snowboarding: "스노보드 타기", ski: "스키", resorts: "리조트들",
+  lake: "호수", water: "물", skate: "스케이트를 타다", skating: "스케이트 타기",
+  rinks: "링크들", path: "길, 코스", inline: "인라인", paths: "길들",
+  horseback: "말 등, 승마", train: "훈련하다; 기차", martial: "무술의",
+  arts: "기술, 예술", studio: "스튜디오, 연습실", mat: "매트",
+  fish: "낚시하다; 물고기", boating: "보트 타기", boat: "보트",
+  gymnastics: "체조", airline: "항공사",
+  // 지시·요청 동사
+  tell: "말하다", describe: "묘사하다, 설명하다", explain: "설명하다",
+  give: "주다, 제시하다", ask: "묻다, 질문하다", answer: "답하다",
+  compare: "비교하다", suggest: "제안하다", propose: "제안하다",
+  offer: "제안하다, 제공하다", apologize: "사과하다", solve: "해결하다",
+  fix: "고치다, 해결하다", deal: "다루다, 대처하다", dealing: "다루는 것",
+  contact: "연락하다", call: "전화하다, 부르다", walk: "걷다; 차근차근 설명하다",
+  spend: "(시간·돈을) 쓰다", remember: "기억하다", think: "생각하다",
+  know: "알다", learn: "배우다", learned: "배웠다", need: "필요하다",
+  want: "원하다", like: "좋아하다; ~같은", enjoy: "즐기다", enjoyed: "즐겼다",
+  happen: "일어나다", happened: "일어났다", decide: "결정하다",
+  involve: "포함하다, 관련되다", involves: "관련되다", involving: "관련된",
+  involved: "관련된", relate: "관련짓다", related: "관련된",
+  plan: "계획; 계획하다", planning: "계획 중인", start: "시작하다",
+  finish: "끝내다", end: "끝; 끝나다", ended: "끝났다", turn: "돌다; 되다",
+  stay: "머무르다", stayed: "머물렀다", change: "바꾸다; 변화", changed: "바뀐",
+  changes: "변화들", cause: "일으키다", caused: "일으켰다",
+  use: "사용하다", uses: "사용하다", make: "만들다", makes: "만들다",
+  made: "만들었다", get: "얻다", go: "가다", going: "가는 중인",
+  come: "오다", comes: "오다", fall: "떨어지다", fallen: "무산된",
+  fell: "떨어졌다", go_apart: "틀어지다", indicate: "나타내다",
+  indicated: "표시했다, 답했다", hear: "듣다", heard: "들었다",
+  become: "되다", became: "되었다", act: "연기하다, 행동하다",
+  look: "보다; ~해 보이다", exist: "존재하다", exists: "존재하다",
+
+  // 명사
+  survey: "설문조사", interview: "면접, 인터뷰", situation: "상황",
+  problem: "문제", problems: "문제들", issue: "문제, 사안",
+  issues: "문제들", concern: "우려", concerns: "우려들",
+  alternative: "대안", alternatives: "대안들", detail: "세부 사항",
+  details: "세부 사항들", information: "정보", question: "질문",
+  questions: "질문들", experience: "경험", story: "이야기",
+  time: "시간; 때", times: "번, 횟수", way: "방식, 길", ways: "방식들",
+  people: "사람들", person: "사람", life: "삶, 인생",
+  country: "나라", news: "뉴스", incident: "사건", incidents: "사건들",
+  arrangement: "약속, 준비", difference: "차이", kind: "종류",
+  kinds: "종류들", sentence: "문장", sentences: "문장들",
+  week: "주", year: "년", years: "년들", summer: "여름",
+  minute: "분", ages: "연령대", beginning: "시작",
+
+  // 형용사·부사
+  memorable: "기억에 남는", special: "특별한", typical: "일반적인, 전형적인",
+  different: "다른", similar: "비슷한", same: "같은", other: "다른",
+  many: "많은", more: "더 많은", most: "가장 많은", few: "몇몇의",
+  some: "몇몇의", any: "어떤", all: "모든", whole: "전체의",
+  full: "완전한", fully: "충분히", detailed: "자세한",
+  unexpected: "예상치 못한", surprising: "놀라운", funny: "재미있는",
+  difficult: "어려운", possible: "가능한", workable: "실행 가능한",
+  specific: "구체적인", general: "일반적인", generally: "대체로",
+  current: "현재의", currently: "현재", recent: "최근의", recently: "최근에",
+  original: "원래의", last: "마지막의; 지난", past: "과거", today: "오늘날",
+  young: "젊은", younger: "더 젊은", old: "나이든", older: "더 나이든",
+  real: "실제의", still: "여전히", also: "또한", often: "자주",
+  usually: "보통", normally: "평소에", once: "한 번",
+  before: "전에", after: "후에", then: "그 다음에", now: "지금",
+  ago: "~전에", back: "뒤로; 되돌아", apart: "떨어져",
+  unfortunately: "안타깝게도", sorry: "미안한", afraid: "두려운; 유감인",
+  okay: "괜찮은", well: "잘", longer: "더 긴; (no longer) 더 이상 ~않는",
+  wrong: "잘못된", right: "옳은", best: "최고의",
+  through: "~을 통해", rather: "오히려", ten: "10", twenty: "20",
+  three: "3", four: "4", two: "2", one: "1",
+
+  // 접속·전치·기능어
+  and: "그리고", or: "또는", but: "그러나", so: "그래서",
+  because: "왜냐하면", while: "~하는 동안; 반면에", whereas: "반면에",
+  compared: "비교하여", than: "~보다", if: "만약", when: "언제; ~할 때",
+  where: "어디", what: "무엇", who: "누구", why: "왜", how: "어떻게",
+  which: "어느", that: "그것; ~라는", this: "이것", those: "그것들",
+  there: "거기", here: "여기", about: "~에 대해", with: "~와 함께",
+  from: "~로부터", to: "~로", for: "~을 위해", of: "~의", in: "~안에",
+  on: "~위에", at: "~에", as: "~로서", up: "위로", out: "밖으로",
+  by: "~에 의해", into: "~안으로", over: "~위에", between: "~사이에",
+  a: "하나의", an: "하나의", the: "그", no: "아니오; 어떤 ~도 없는",
+  not: "아니다", yes: "네",
+
+  // 대명사·be동사
+  i: "나", you: "당신", your: "당신의", yours: "당신의 것",
+  yourself: "너 자신", me: "나를", my: "나의", it: "그것", its: "그것의",
+  they: "그들", their: "그들의", them: "그들을", we: "우리",
+  he: "그", she: "그녀", is: "~이다", are: "~이다", am: "~이다",
+  was: "~였다", were: "~였다", be: "~이다", been: "~였던",
+  do: "하다", does: "하다", did: "했다", done: "완료된",
+  have: "가지다", has: "가지다", had: "가졌다",
+  will: "~할 것이다", would: "~할 것이다", can: "할 수 있다",
+  could: "할 수 있었다", may: "~일지도 모른다", might: "~일지도 모른다",
+  should: "~해야 한다", must: "~해야 한다",
+  let: "~하게 하다", please: "부디, ~해 주세요",
+
+  // 주제 어휘
+  movie: "영화", movies: "영화들", theater: "극장", park: "공원",
+  parks: "공원들", music: "음악", concert: "콘서트", concerts: "콘서트들",
+  performance: "공연", performances: "공연들", museum: "박물관",
+  museums: "박물관들", camping: "캠핑", beach: "해변", bar: "술집",
+  bars: "술집들", sport: "운동", sports: "운동", swimming: "수영",
+  cycling: "자전거 타기", jogging: "조깅", walking: "걷기", yoga: "요가",
+  hiking: "하이킹", fishing: "낚시", gym: "체육관, 헬스장",
+  reading: "독서", instrument: "악기", dancing: "춤추기",
+  writing: "글쓰기", drawing: "그림 그리기", cooking: "요리",
+  pet: "애완동물", pets: "애완동물들", home: "집", dormitory: "기숙사",
+  school: "학교", workplace: "직장", trip: "여행", trips: "여행들",
+  travel: "여행하다", abroad: "해외로", vacation: "휴가",
+  business: "사업, 업무", bank: "은행", banks: "은행들",
+  weather: "날씨", season: "계절", seasons: "계절들", hotel: "호텔",
+  hotels: "호텔들", holiday: "휴일, 명절", holidays: "휴일들",
+  appointment: "약속", appointments: "약속들", gathering: "모임",
+  gatherings: "모임들", industry: "산업", industries: "산업들",
+  health: "건강", restaurant: "식당", restaurants: "식당들",
+  cafe: "카페", cafes: "카페들", transportation: "교통수단",
+  public: "공공의", recycling: "재활용", internet: "인터넷",
+  technology: "기술", electronic: "전자의", device: "기기",
+  devices: "기기들", shopping: "쇼핑", store: "가게", neighborhood: "동네",
+  family: "가족", friend: "친구", friends: "친구들", job: "직업",
+  phone: "전화", library: "도서관", clinic: "병원, 진료소",
+  agency: "대행사", office: "사무실", ticket: "표",
+  interested: "관심 있는", live: "살다; 라이브의",
+
+  // ── 문형을 늘리면서 새로 들어온 어휘 ──────────────────────
+  // 사전은 문항에 나오는 단어를 모두 덮어야 한다. 모르는 단어를 짚었는데
+  // 아무것도 안 뜨면 우측 사전 자체가 믿을 수 없는 기능이 된다.
+  // 굴절형(-s, -ed, -ing)은 lookup 이 원형으로 되돌리므로 원형만 적는다.
+
+  // 지시·요청
+  trace: "따라가며 짚다", weigh: "견주어 보다", lay: "펼쳐 놓다",
+  cover: "다루다", address: "다루다, 대응하다", anticipate: "미리 헤아리다",
+  recount: "되짚어 이야기하다", brief: "설명해 주다; 짧은",
+  distinguish: "구분하다", recommend: "추천하다", suppose: "가정하다",
+  imagine: "상상하다", expect: "예상하다", notice: "알아차리다",
+  recognize: "알아보다", respond: "반응하다", adapt: "적응하다",
+  adjust: "적응하다, 조정하다", handle: "다루다, 처리하다",
+  resolve: "해결하다", settle: "매듭짓다", accept: "받아들이다",
+  prefer: "더 좋아하다", include: "포함하다", connect: "잇다",
+  develop: "발전하다, 전개되다", shift: "옮겨 가다", drive: "몰다; 이끌다",
+  affect: "영향을 주다", suit: "맞다, 어울리다", outweigh: "더 크다",
+  disagree: "의견이 다르다", commit: "결정을 굳히다", arise: "생기다",
+  face: "마주하다", fail: "실패하다", gain: "얻다",
+  lose: "잃다", follow: "뒤따르다; 따라가다", visit: "방문하다",
+  pack: "짐을 싸다", prepare: "준비하다", share: "함께 쓰다",
+  jog: "조깅하다", hike: "등산하다", ride: "타다", cook: "요리하다",
+  buy: "사다", wear: "입다", eat: "먹다", listen: "듣다", watch: "보다",
+  read: "읽다", play: "놀다, 연주하다", meet: "만나다", move: "옮기다",
+  keep: "두다, 유지하다", bring: "가져오다", choose: "고르다",
+  check: "확인하다", sort: "분류하다", paint: "그리다, 칠하다",
+  support: "뒷받침하다", 
+
+  // 명사 — 사람·장소
+  coworker: "직장 동료", roommate: "룸메이트", neighbor: "이웃",
+  professor: "교수", classmate: "반 친구", parent: "부모",
+  generation: "세대", society: "사회", 
+  actor: "배우", artist: "예술가, 아티스트", singer: "가수",
+  company: "회사", campus: "캠퍼스", city: "도시", 
+  korea: "한국", area: "지역", place: "장소", room: "방",
+  kitchen: "부엌", yard: "마당", house: "집", 
+  apartment: "아파트", dorm: "기숙사",
+  building: "건물", facility: "시설", venue: "공연장",
+  hall: "홀, 회관", entrance: "입구", desk: "책상", shop: "가게",
+  trail: "등산로", mountain: "산", route: "경로",
+  transit: "대중교통", subway: "지하철", bus: "버스",
+  commute: "통근", 
+
+  // 명사 — 사물·개념
+  thing: "것", option: "선택지", example: "예", evidence: "근거",
+  argument: "논거", position: "입장", opinion: "의견", view: "견해",
+  reasoning: "논리", reason: "이유", side: "측면", part: "부분",
+  order: "순서; 주문", background: "배경", event: "사건",
+  moment: "순간", day: "날", morning: "아침", weekend: "주말",
+  decade: "10년", age: "나이, 시대", point: "지점, 요점",
+  improvement: "개선", 
+  effect: "영향", consequence: "결과",
+  advantage: "장점", disadvantage: "단점", strength: "강점",
+  weakness: "약점", solution: "해결책", decision: "결정",
+  recommendation: "추천", objection: "반대 의견",
+  compromise: "타협", complication: "복잡한 사정",
+  difficulty: "어려움", challenge: "과제, 어려움", mistake: "실수",
+  habit: "습관", routine: "루틴, 일과", practice: "연습",
+  workout: "운동", equipment: "장비", gear: "장비",
+  bicycle: "자전거", camera: "카메라", 
+  dish: "요리", food: "음식", drink: "음료", clothes: "옷",
+  book: "책", game: "게임", video: "영상", website: "웹사이트",
+  app: "앱", product: "제품", service: "서비스", policy: "정책",
+  rule: "규칙", project: "프로젝트", class: "수업",
+  housework: "집안일", care: "돌봄, 관리", layout: "구조, 배치",
+  atmosphere: "분위기", personality: "성격", relationship: "관계",
+  connection: "연결, 관련", preference: "선호", 
+  photo: "사진", picture: "사진, 그림", 
+  banking: "은행 업무", environment: "환경", cost: "비용",
+  matter: "문제; 중요하다", mind: "마음; 꺼리다",
+
+  // 형용사·부사·기타
+  better: "더 나은", biggest: "가장 큰", big: "큰", small: "작은",
+  favorite: "가장 좋아하는", normal: "평범한", serious: "심각한",
+  unforgettable: "잊을 수 없는", comparable: "견줄 만한",
+  environmental: "환경의", musical: "음악의", daily: "매일의",
+  domestic: "국내의", major: "주요한", healthy: "건강한",
+  fixed: "정해진", worst: "가장 나쁜", overrated: "과대평가된",
+  clearly: "분명하게", thoroughly: "충분히, 철저히",
+  personally: "개인적으로", honestly: "솔직히", completely: "완전히",
+  exactly: "정확히", finally: "마침내", lately: "요즘",
+  instead: "대신에", among: "~ 사이에서", against: "~에 맞서",
+  whether: "~인지 아닌지", since: "~이후로; ~ 때문에",
+  around: "주변에", near: "가까이", inside: "안에",
+  ahead: "앞으로", away: "떨어져", tomorrow: "내일",
+  somewhere: "어딘가", anything: "무엇이든", everything: "모든 것",
+  someone: "누군가", another: "또 다른", each: "각각의",
+  both: "둘 다", enough: "충분한", ever: "한 번이라도",
+  never: "결코 ~않다", much: "많이", lot: "많음",
+
+  // 기본어 — 위 목록에서 빠져 있던 것
+  work: "일; 일하다", first: "첫 번째의", else: "그 밖의",
+  arrive: "도착하다", together: "함께", ready: "준비된",
+  try: "시도하다", child: "아이", take: "가져가다, 걸리다",
+  say: "말하다", next: "다음의", hard: "어려운; 열심히",
+  important: "중요한", good: "좋은", bad: "나쁜", down: "아래로",
+  these: "이것들", strong: "강한", strongest: "가장 강한",
+  approach: "접근 방식; 다가가다", across: "가로질러",
+  own: "자신의", very: "매우", set: "놓다; 세트",
+  alone: "혼자", help: "돕다", find: "찾다",
+  present: "현재의; 제시하다", box: "상자", new: "새로운",
+  online: "온라인의", color: "색", size: "크기",
+  tv: "텔레비전", long: "긴", mobile: "이동식의, 모바일",
+  account: "계좌; 설명하다", stand: "서다; 두드러지다",
+  differ: "다르다", plan_verb: "계획하다", mean: "의미하다",
+  head: "머리; 향하다", surround: "둘러싸다",
+
+  // 불규칙 변화형 — lookup 은 -s/-ed/-ing 만 되돌린다
+  went: "갔다", took: "가져갔다", met: "만났다", knew: "알았다",
+  taken: "가져간", gone: "가버린", said: "말했다", drove: "이끌었다",
+  spent: "썼다", dealt: "다뤘다", arisen: "생겨난", got: "얻었다",
+  felt: "느꼈다", feel: "느끼다", shaped: "형성했다",
+  worked: "일했다, 통했다", tried: "시도했다", planned: "계획했다",
+  meant: "의미했다", disappeared: "사라졌다",
+  fits: "맞다, 자리잡다", shows: "보여 주다; 프로그램들",
+  something: "무언가", getting: "얻는 것", known: "알려진",
+
+  // 축약형
+  "i'll": "나는 ~할 것이다", "i'm": "나는 ~이다",
+  "that's": "그것은 ~이다", "let's": "~하자",
+  "people's": "사람들의", "parents'": "부모의", "else's": "다른 사람의",
+};
+
+/** 단어 하나의 뜻을 찾는다. 굴절형은 간단히 정규화해 시도한다. */
+export function lookup(raw: string): string | null {
+  const w = raw.toLowerCase().replace(/[^a-z']/g, "");
+  if (!w) return null;
+  if (DICTIONARY[w]) return DICTIONARY[w];
+  const stems = [
+    w.replace(/'s$/, ""),
+    w.replace(/ies$/, "y"),
+    w.replace(/es$/, ""),
+    w.replace(/s$/, ""),
+    w.replace(/ed$/, ""),
+    w.replace(/ed$/, "e"),
+    w.replace(/ing$/, ""),
+    w.replace(/ing$/, "e"),
+  ];
+  for (const s of stems) if (s !== w && DICTIONARY[s]) return DICTIONARY[s];
+  return null;
+}
+
+export const STOPWORDS = new Set([
+  "a", "an", "the", "of", "to", "in", "on", "at", "and", "or", "is", "are", "am",
+  "was", "were", "be", "it", "i", "you", "your", "do", "does", "did", "that",
+  "this", "for", "as", "with", "from", "not", "no", "yes", "me", "my", "so",
+]);
+
+/** 문항 텍스트에서 사전에 있는 주요 단어를 뽑는다 */
+export function glossaryFor(text: string, limit = 8): { en: string; ko: string }[] {
+  const seen = new Set<string>();
+  const out: { en: string; ko: string }[] = [];
+  for (const w of text.toLowerCase().match(/[a-z']+/g) ?? []) {
+    if (STOPWORDS.has(w) || seen.has(w)) continue;
+    const ko = lookup(w);
+    if (!ko) continue;
+    seen.add(w);
+    out.push({ en: w, ko });
+    if (out.length >= limit) break;
+  }
+  return out;
+}
