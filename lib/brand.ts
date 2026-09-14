@@ -1,12 +1,18 @@
 /**
  * 어느 조직 이름으로 내보낼지 한 곳에서 정한다.
  *
- * 같은 서비스를 학교용·회사용으로 번갈아 보여 줄 일이 있어, 화면마다 조직
- * 이름을 박아 두면 되돌릴 때 전부 다시 찾아야 한다. 문구를 여기 모아 두고
- * 아래 ACTIVE 한 줄만 바꾸면 전체가 따라 바뀌게 한다.
+ * 같은 서비스를 학교용·회사용으로 나란히 내보내고 있다. 화면마다 조직 이름을
+ * 박아 두면 한쪽을 고칠 때 전부 다시 찾아야 하므로, 문구를 여기 모아 두고
+ * 아래 BRANDS 에서 고른 한 벌이 전체를 정하게 한다.
  *
- * 색도 같이 바뀐다 — tailwind.config.ts 의 dku 팔레트 값이 조직 색이다.
- * 이름을 바꿀 때 그 파일의 팔레트도 함께 바꿔야 한다 (주석에 두 벌 적어 두었다).
+ * 어느 벌을 쓸지는 빌드할 때 환경변수 NEXT_PUBLIC_BRAND 가 정한다. 덕분에
+ * 두 조직이 같은 코드를 쓰고, 배포마다 값만 달리 넣으면 된다.
+ *   - 값이 없으면 단국대("dku")
+ *   - 한화엔진으로 내보내는 배포에는 NEXT_PUBLIC_BRAND=hanwha 를 넣는다
+ *
+ * 색도 같이 바뀐다 — tailwind.config.ts 가 이 ACTIVE 로 팔레트를 고른다.
+ * 브라우저 탭 아이콘도 따라간다 — scripts/sync-icon.mjs 가 빌드 전에
+ * public/icon-<브랜드> 를 app/icon 으로 옮겨 놓는다.
  */
 export type BrandKey = "dku" | "hanwha";
 
@@ -60,9 +66,8 @@ export interface Brand {
    * 공식 로고 파일. 있으면 그림을 그대로 쓰고 직접 그리지 않는다.
    * markImage 는 사명 없이 마크만 담은 그림.
    *
-   * 브라우저 탭 아이콘(app/icon.png)도 markImage 로 만든 것이다.
-   * 정적 파일이라 ACTIVE 를 따라가지 않는다. 단국대로 되돌릴 때는
-   * app/icon.png 를 지우고 public/icon-dku.svg 를 app/icon.svg 로 옮긴다.
+   * 브라우저 탭 아이콘은 여기가 아니라 public/icon-<브랜드> 에 따로 둔다
+   * (scripts/sync-icon.mjs 가 빌드 전에 app/icon 으로 옮긴다).
    */
   logoImage: string;
   markImage: string;
@@ -106,7 +111,9 @@ const BRANDS: Record<BrandKey, Brand> = {
     heroAspectNarrow: "1095/466",
     heroTextBaked: true,
     sideImage: "/campus.jpg",
-    loginImage: "/campus.jpg",
+    // campus.jpg 는 표어가 사진에 박혀 있다. 세로로 긴 로그인 칸에서는 그 글씨가
+    // 잘려 나가고 화면이 그리는 문구와도 겹치므로, 글씨 없는 사진을 쓴다.
+    loginImage: "/hero-student.jpg",
     loginHeadline: ["더 넓은 세상으로,", "영어로 이어가다."],
     loginSubline: ["단국대 재학생을 위한", "AI 영어 말하기 학습"],
     logoImage: "",
@@ -158,7 +165,17 @@ const BRANDS: Record<BrandKey, Brand> = {
   },
 };
 
-/** ★ 여기 한 줄만 바꾸면 전체가 따라 바뀐다 */
-export const ACTIVE: BrandKey = "hanwha";
+/** 값이 없거나 모르는 이름이면 단국대로 본다 */
+export const DEFAULT_BRAND: BrandKey = "dku";
+
+/**
+ * ★ 어느 조직으로 내보낼지는 빌드할 때 정해진다.
+ *
+ * NEXT_PUBLIC_BRAND 는 Next 가 빌드 중에 값을 그대로 박아 넣는다. 그래서
+ * 이 줄은 브라우저에서도, 빌드 도구(tailwind.config.ts)에서도 같은 답을 낸다.
+ * 풀어 쓰지 말 것 — process.env.NEXT_PUBLIC_BRAND 라고 통째로 적어야 바뀐다.
+ */
+export const ACTIVE: BrandKey =
+  process.env.NEXT_PUBLIC_BRAND === "hanwha" ? "hanwha" : DEFAULT_BRAND;
 
 export const BRAND = BRANDS[ACTIVE];
